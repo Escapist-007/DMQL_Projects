@@ -53,8 +53,11 @@ The DB schema must be able to support all the functions listed above. Use E/R mo
   <img src="images/TinyHub_ER.png" alt="ub_logo.jpg" width="600" height="600"> <br>  
 </p>
 
+### [Project_02](Project_02) :
+<img src="images/bar.jpg" alt="bar.jpg" width="1100" height="3"> <br>
 
+**Problem:** 
+The project is about writing queries in SQL2 and SQL3, relational algebra formulation, representing Graph in SQL and recursive query problems. This project contains some advanced SQL problems which are really challenging to solve.
 
-
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [SQL_script](Project_02/My_Submission/code.sql)
 
