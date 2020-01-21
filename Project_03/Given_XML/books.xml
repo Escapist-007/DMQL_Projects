@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblio[
+<!ELEMENT biblio (author*)>
+<!ELEMENT author (name,book*)> 
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT book (title, price)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST book year CDATA #REQUIRED>
+]>
+<biblio>
+	<author>
+	        <name>Smith</name>
+		<book year = "2019">
+			<title> Database systems</title>
+			<price> 500</price>
+		</book>
+		<book year = "2018">
+			<title> Big data analytics</title>
+			<price> 400</price>
+		</book>
+		<book year = "2017">
+			<title> Introduction to Python</title>
+			<price> 300</price>
+		</book>
+		<book year = "2016">
+			<title> Introduction to R programming</title>
+			<price> 200</price>
+		</book>
+	</author>
+	<author>
+	        <name>Jones</name>
+		<book year = "2019">
+			<title> Database systems</title>
+			<price> 500</price>
+		</book>
+	</author>
+	<author>
+	  <name>Ted</name>
+	</author>
+</biblio>

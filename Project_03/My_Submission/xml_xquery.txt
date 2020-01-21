@@ -1,0 +1,91 @@
+
+
+             					(: Answer for 2.1 :)
+
+let $xml := doc("/db/books.xml")
+
+
+let $main_author := "Jeff Ullman"  (: Given Name of the author :)
+
+for $bt in $xml/biblio/author[name = $main_author]/book/title/string() (: all books of given author :)
+ 
+for $other in $xml/biblio/author[name != $main_author]
+
+let $co_authors := string-join(($other/book[title = $bt]/../name/string(),$bt),":")
+
+for $a in $co_authors
+let $result := $a where count(tokenize($a,":")) eq 2
+
+return $result
+
+
+
+						(: Answer for 2.2 :)
+
+let $xml := doc("/db/books.xml")
+
+(: Price list of all books where each book is considered only once :)
+
+let $prices := for $uniq_book_with_price in distinct-values($xml/biblio/author/book)
+               return xs:integer(tokenize($uniq_book_with_price,' ')[position() eq last()])
+
+(: Name of the authors whose books average is at least 
+   twice the average book price over all books :)
+
+return distinct-values(
+    for $a in $xml/biblio/author
+    where avg($a//price) >= 2*avg($prices)
+    return $a/name/string()   (: For the auhtor tag with children element use only "$a" :)
+)
+
+
+
+					      (: Answer for 2.3 :)
+
+let $xml := doc("/db/books.xml")
+                                    
+(: Assumption: Book titles are unique. A book has same title and year throughout the xml file :)
+
+
+<biblio>
+{ 
+     let $book_titles := distinct-values($xml/biblio//title)
+  
+     for $bt in $book_titles
+     
+     let $p := $xml/biblio/author/book[title=$bt]
+     
+     return  <book year='{distinct-values($p/@year/string())}'>
+     
+                <title> {$bt} </title> 
+                
+                <price> {distinct-values($p/price)} </price> 
+                
+                <authors>
+                   { 
+                     for $author in $xml/biblio/author/book[title=$bt]/../name
+                     return <author> 
+                     			{$author/string()} 
+                     	   </author> 
+                   }
+                </authors>
+       
+            </book>
+}
+</biblio>
+
+
+
+				(: New DTD where authors are listed under their books :)
+						(: DTD data format B :)
+
+<!DOCTYPE biblio[
+<!ELEMENT biblio (book*)>
+<!ELEMENT book (title, price, authors)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST book year CDATA #REQUIRED>
+<!ELEMENT authors (author+)>
+<!ELEMENT author (name)>
+<!ELEMENT name (#PCDATA)>
+]>
