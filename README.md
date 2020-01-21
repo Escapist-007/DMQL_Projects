@@ -1,2 +1,47 @@
-# DMQL_Projects
-The projects are part of the graduate-level course CSE-560 : Data Models and Query Language [Fall 2019 @ UB_SUNY] Course Instructor : Jan Chomicki (https://cse.buffalo.edu/~chomicki/)
+# Fall 2019
+<p align="center">
+<img src="images/ub.png" alt="ub_logo.jpg" width="100" height="100"> <br>
+  <b> CSE-560:  Data Models and Query Languages </b>
+</p>
+
+### [Project_01](Project_01) :
+<img src="images/bar.jpg" alt="bar.jpg" width="1100" height="3"> <br>
+
+**Problem:** 
+Design and Implement a database schema for `TinyHub`, which is a course enrollment website. It provides simple functions, main functions of TinyHub are the following: </br>
+
+● `User management`: user sign up, user login/logout </br>
+
+Users can be of three types: Students, Professors, and Staff. Users sign up using their email addresses, the email addresses are used as the TinyHub usernames of the users, users need to set their passwords and display names, where:
+ - username, password and display names are strings.
+ - one account, i.e. one username, has only one display name, and one display name
+corresponds to only one username.
+ - one email address can be used to register only one account.
+ - each user belongs to a department. Department has an identifying department number. Student can have multiple majors, i.e. a student in Computer Science and Math. </br>
+ 
+● `Department-course relationship management`: create and delete a course </br>
+
+Course has a unique course number. The information of a course is provided each semester by the Staff in the appropriate department and consists of:
+  - Name of the course.
+  - Department of the course.
+  - The instructor, an instructor has to be a professor. Different professors may teach the same course in different semesters.
+  - The TAs of this course. All TAs must be students. A course can have many TAs and
+different TAs in different semesters.
+  - The prerequisite courses of the course. A course may have zero or more prerequisite
+courses. </br>
+
+● `Enrollment`: Register/Enroll for a course, provide feedback </br>
+
+- A student can enroll in a course only if
+  - that student passes all the prerequisite courses
+  - it is being offered by a department they are majoring in
+  - the capacity of the course is not full </br>
+- Students will have a grade (F/D/C/B/A) with the course, which will be given after the student
+finishes the course.
+- Students can post feedback for the instructor or TAs of the course in which they enrolled.
+- Each course has one or more exams. Students who take that course have letter grades on
+those exams.
+- Each exam has a number of problems. Students have scores on those problems. </br>
+
+The DB schema must be able to support all the functions listed above. Use E/R modeling and ER-Diagram to design the database, map the E/R model to a relational database schema, and implement the mapped schema using a RDBMS by a set of CREATE TABLE statements.
+
