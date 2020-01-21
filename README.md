@@ -43,5 +43,18 @@ finishes the course.
 those exams.
 - Each exam has a number of problems. Students have scores on those problems. </br>
 
-The DB schema must be able to support all the functions listed above. Use E/R modeling and ER-Diagram to design the database, map the E/R model to a relational database schema, and implement the mapped schema using a RDBMS by a set of CREATE TABLE statements.
+The DB schema must be able to support all the functions listed above. Use E/R modeling and E/R diagram to design the database, map the E/R model to a relational database schema, and implement the mapped schema using a RDBMS by a set of CREATE TABLE statements.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DDL_Script](Project_01/My_Submission/TinyHUB.sql)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Report](Project_01/My_Submission/report.pdf)
+
+
+<p align="center">
+  <b> E/R diagram </b> </br>
+  <img src="images/TinyHub_ER.png" alt="ub_logo.jpg" width="600" height="600"> <br>  
+</p>
+
+
+
+
+
 
